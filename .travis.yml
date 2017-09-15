@@ -1,21 +1,22 @@
----
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 sudo: false
-
 cache:
   directories:
-    - $HOME/.npm
-
+  - "$HOME/.npm"
 before_install:
-  - npm config set spin false
-  - npm install -g phantomjs-prebuilt
-  - phantomjs --version
-
+- npm config set spin false
+- npm install -g phantomjs-prebuilt
+- phantomjs --version
 install:
-  - npm install
-
+- npm install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: TvBRzkvspAEUFKPvijHzCYIcAJ73n8uEF++5Kg6Je02nA5zJ7+/Ciw2laYDDYkU30NVjN5hD4oKCGMvaGMFYxI7ojVQAbNtFW6gpoDiHdP3W5nQJ1TLJpjJhHFTk9AFF69YQA19tkH7pfQHmDIHF82gAEYdm9/K9r//rD7Mg9YOzv5noTSiPvTlZ1/pMF16c7JFnuhSQzbdGKKQA68w1/ydJN4WEeVm74AXnUCkVlMwXPo55aliSCHJhwa4I29Lq6o6ZQtDUt3iGS3mXgsoZv65mEvjvaruJGHNKrvTq4hnMB0VpXjsnqzeIpZn3TGkgxAyWKeIEl8o3/4WIewGylOswX19v6b5nHs9bvHrnGdPQadvwzAp4xgG++w0SpjwEtgPhDQj2m+bVSXdPwVRIIC5OKblXSTxD99N+DU9jCWz/zMB724KDekJMk64Zo+FKmnn+pOPrbN9gXDiWARPm1pD0B4GpPdRsoCGuwXVQQ7gZ2/0So0syeksaVv9zy1cLZv9GJ2ixdsy9w5yChwnbIJ58beGfp4jPwfGirS1DXK+YBB3jr3q141JwdbE7ruiNjal5xEjHzW3/j/dL99+tazYwK6BT+e038HSRQYtiQw+6KoxJrVWzm8JPvpkRZ1kgw6XC+vzLNT+uniVfQFaq++5uoDNgu9KLy4FAhshLm28=
+  app: vast-peak-46390
+  on:
+    repo: antonbavykin1991/simple-fastboot-example
