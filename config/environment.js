@@ -7,6 +7,22 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+
+    firebase: {
+      apiKey: "AIzaSyAbppz6ZFp69PGZY_IVTWHQbyJj_A4flp4",
+      authDomain: "vivid-heat-5474.firebaseapp.com",
+      databaseURL: "https://vivid-heat-5474.firebaseio.com",
+      projectId: "vivid-heat-5474",
+      storageBucket: "vivid-heat-5474.appspot.com",
+      messagingSenderId: "990498281000"
+    },
+
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
