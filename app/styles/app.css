@@ -1,0 +1,7 @@
+@media print {
+  @page {
+    size: 30mm auto;
+    font-size: 6px;
+    margin: 0;
+  }
+}
